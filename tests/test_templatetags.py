@@ -49,12 +49,12 @@ def render_field(field, context=None):
 
 class MediaTest(TestCase):
     def expected_css(self, tag):
-        template = '<link href="{href}" integrity="{integrity}" crossorigin="{crossorigin}" rel="stylesheet">'
+        template = '<link href="{href}" rel="stylesheet">'
         setting = get_bootstrap_setting(tag + "_url")
         return template.format(**setting)
 
     def expected_js(self, tag):
-        template = '<script src="{url}" integrity="{integrity}" crossorigin="{crossorigin}"></script>'
+        template = '<script src="{url}"></script>'
         setting = get_bootstrap_setting(tag + "_url")
         return template.format(**setting)
 
